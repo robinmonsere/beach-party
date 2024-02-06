@@ -158,7 +158,7 @@
     #info {
       display: flex;
       flex-direction: column;
-      height: calc(100vh - 3.5rem);
+      height: calc(100vh - 5.5rem);
       justify-content: end;
       gap: 2rem;
       i {
