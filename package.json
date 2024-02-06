@@ -18,6 +18,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@fontsource/inter": "^5.0.16"
+		"@fontsource/inter": "^5.0.16",
+		"@vercel/speed-insights": "^1.0.9"
 	}
 }

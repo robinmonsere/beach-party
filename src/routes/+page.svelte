@@ -2,6 +2,7 @@
     import './styles.css';
     import '$lib/reset.css'
     import beach_video from "$lib/videos/beach.mp4"
+    import { injectSpeedInsights } from "@vercel/speed-insights/sveltekit"
 </script>
 
 <header>
