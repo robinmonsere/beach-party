@@ -1,10 +1,10 @@
 <script>
     import './styles.css';
-    import '$lib/reset.css'
-    import beach_video from "$lib/videos/beach.mp4"
-    import { injectSpeedInsights } from "@vercel/speed-insights/sveltekit"
-    const apiKey = import.meta.env.MAPS_API_KEY
-    console.log(apiKey)
+    import '$lib/reset.css';
+    import beach_video from "$lib/videos/beach.mp4";
+    import { injectSpeedInsights } from "@vercel/speed-insights/sveltekit";
+    injectSpeedInsights();
+    const apiKey = import.meta.env.MAPS_API_KEY;
 </script>
 
 <header>
