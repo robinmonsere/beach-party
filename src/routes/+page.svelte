@@ -3,6 +3,8 @@
     import '$lib/reset.css'
     import beach_video from "$lib/videos/beach.mp4"
     import { injectSpeedInsights } from "@vercel/speed-insights/sveltekit"
+    const apiKey = import.meta.env.MAPS_API_KEY
+    console.log(apiKey)
 </script>
 
 <header>
@@ -46,7 +48,7 @@
                 <p>8770 Ingelmunster</p>
                 <div id="map">
                     <iframe title="map" width="600" height="300" style="border:0" loading="lazy" allowfullscreen
-                            src="https://www.google.com/maps/embed/v1/place?q=place_id:EidUcmFrZWx3ZWcgMSwgODc3MCBJbmdlbG11bnN0ZXIsIEJlbGdpdW0iMBIuChQKEgnHIxt7CDnDRxHrbWeStiQiARABKhQKEgnzAoForznDRxEFN7HfwUSrqQ&key=AIzaSyCwA-_f7NbGk8TIhaEXmM3woxpQYKNEoTo"></iframe>
+                            src="https://www.google.com/maps/embed/v1/place?q=place_id:EidUcmFrZWx3ZWcgMSwgODc3MCBJbmdlbG11bnN0ZXIsIEJlbGdpdW0iMBIuChQKEgnHIxt7CDnDRxHrbWeStiQiARABKhQKEgnzAoForznDRxEFN7HfwUSrqQ&key={apiKey}"></iframe>
                 </div>
             </div>
         </div>
