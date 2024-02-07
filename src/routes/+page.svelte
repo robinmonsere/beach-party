@@ -186,7 +186,6 @@
       font-size: 3rem;
       line-height: 1.5;
       color: var(--color-text-1);
-
       i {
         font-style: italic;
 
@@ -281,11 +280,8 @@
     #info-container {
       background-image: none;
       #info {
-        justify-content: space-between;
-        gap: 0;
-        .info {
-          flex-grow: 1;
-        }
+        //justify-content: space-between;
+        gap: 1rem;
         #map {
           width: 100%;
           height: 40vh;
@@ -295,9 +291,17 @@
           }
         }
       }
-
     }
+  }
 
+  @media screen and (max-height: 500px) {
+    #info-container {
+      #info {
+        #map {
+          height: 20vh;
+        }
+      }
+    }
   }
 
 </style>
