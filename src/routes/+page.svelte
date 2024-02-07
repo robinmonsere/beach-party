@@ -1,7 +1,7 @@
 <script>
     import './styles.css';
     import '$lib/reset.css';
-    import beach_video from "$lib/videos/beach.mp4";
+    import beach_video from "$lib/videos/32.mp4";
     import { injectSpeedInsights } from "@vercel/speed-insights/sveltekit";
     import {onMount} from "svelte";
     injectSpeedInsights();
