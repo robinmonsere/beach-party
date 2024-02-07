@@ -3,8 +3,27 @@
     import '$lib/reset.css';
     import beach_video from "$lib/videos/beach.mp4";
     import { injectSpeedInsights } from "@vercel/speed-insights/sveltekit";
+    import {onMount} from "svelte";
     injectSpeedInsights();
     const MAPS_API_KEY = import.meta.env.VITE_PUBLIC_MAPS_API_KEY;
+
+    function toggleVideo() {
+        const video = document.getElementById('myVideo');
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    }
+
+    function scrollToBottom() {
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth'
+        });
+    }
+
+
 </script>
 
 <header>
@@ -13,7 +32,7 @@
     <span></span>
 </header>
 <main>
-    <section id="content">
+    <section on:click={toggleVideo} id="content">
         <div class="slide-bg" data-parallax>
             <video autoplay muted loop id="myVideo">
                 <source src="{beach_video}" type="video/mp4">
@@ -21,7 +40,7 @@
         </div>
         <div id="slide-content">
             <h1>Beach Party 2024 <br><i>SAME</i> people <br><i>MORE</i> space</h1>
-            <i class="fa-solid fa-angle-double-down"></i>
+            <i on:click={scrollToBottom} class="fa-solid fa-angle-double-down"></i>
         </div>
     </section>
     <section id="info-container">
@@ -39,7 +58,6 @@
                             class="fa-brands fa-tiktok"></i></a>
                     <a href="https://www.instagram.com/beachpartyscoutsingelmunster/" target="_blank"><i
                             class="fa-brands fa-instagram"></i></a>
-
                 </div>
             </div>
             <div class="info" id="location">
@@ -63,9 +81,11 @@
     margin: 0;
     padding: 0;
     height: 150vh;
+    overscroll-behavior: none;
   }
 
   header {
+    overscroll-behavior: none;
     position: sticky;
     top: 0;
     background-color: transparent;
@@ -101,6 +121,7 @@
   }
 
   #content {
+    overscroll-behavior: none;
     height: 100vh;
     background-color: transparent;
   }
@@ -124,12 +145,41 @@
     padding: 1.5rem 1rem;
     flex-direction: column;
     height: 80%;
-    .fa-solid {
+    .fa-angle-double-down {
       align-self: center;
       font-size: 2rem;
       color: white;
       margin-top: 1rem;
       animation: bounce 2s infinite;
+    }
+    #pause {
+        background: transparent;
+        position: absolute;
+        border: 0.25rem solid #ffffff;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        right: 5%;
+      color: white;
+      font-weight: 900;
+      font-size: 1.2rem;
+      i.fa-solid {
+        background: hotpink;
+        color: white;
+        font-weight: 900;
+
+      }
+      &:hover {
+        background-color: white;
+        i {
+          color: var(--color-theme-2);
+        }
+      }
     }
     h1 {
       font-weight: 600;
