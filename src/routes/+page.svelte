@@ -4,7 +4,7 @@
     import beach_video from "$lib/videos/beach.mp4";
     import { injectSpeedInsights } from "@vercel/speed-insights/sveltekit";
     injectSpeedInsights();
-    import { PUBLIC_MAPS_API_KEY } from '$env/static/public';
+    const MAPS_API_KEY = import.meta.env.VITE_PUBLIC_MAPS_API_KEY;
 </script>
 
 <header>
@@ -48,7 +48,7 @@
                 <p>8770 Ingelmunster</p>
                 <div id="map">
                     <iframe title="map" width="600" height="300" style="border:0" loading="lazy" allowfullscreen
-                            src="https://www.google.com/maps/embed/v1/place?q=place_id:EidUcmFrZWx3ZWcgMSwgODc3MCBJbmdlbG11bnN0ZXIsIEJlbGdpdW0iMBIuChQKEgnHIxt7CDnDRxHrbWeStiQiARABKhQKEgnzAoForznDRxEFN7HfwUSrqQ&key={PUBLIC_MAPS_API_KEY}"></iframe>
+                            src="https://www.google.com/maps/embed/v1/place?q=place_id:EidUcmFrZWx3ZWcgMSwgODc3MCBJbmdlbG11bnN0ZXIsIEJlbGdpdW0iMBIuChQKEgnHIxt7CDnDRxHrbWeStiQiARABKhQKEgnzAoForznDRxEFN7HfwUSrqQ&key={MAPS_API_KEY}"></iframe>
                 </div>
             </div>
         </div>
