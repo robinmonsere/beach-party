@@ -39,7 +39,7 @@
             </video>
         </div>
         <div id="slide-content">
-            <h1>Beach Party 2024 <br><i>SAME</i> people <br><i>MORE</i> space</h1>
+            <h1>Beach Party 2025 <br>The <i>next</i> chapter</h1>
             <i on:click={scrollToBottom} class="fa-solid fa-angle-double-down"></i>
         </div>
     </section>
@@ -47,7 +47,7 @@
         <div id="info">
             <div class="info">
                 <h3>Date</h3>
-                <p>Sat - 27.04 - 22:00</p>
+                <p>Sat - 26.04 - 22:00</p>
             </div>
             <div class="info">
                 <h3>Socials</h3>
