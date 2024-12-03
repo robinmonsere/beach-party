@@ -27,7 +27,7 @@
 </script>
 
 <header>
-    <a href="https://www.your-tickets.be/events/BEACHPARTY36theditionSAMEpeopleMOREspace" target="_blank"><h2>
+    <a href="https://www.your-tickets.be/events/BEACHPARTY37thEDITIONTHENEXTCHAPTER" target="_blank"><h2>
         Tickets</h2></a>
     <span></span>
 </header>
